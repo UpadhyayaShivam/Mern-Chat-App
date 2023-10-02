@@ -3,10 +3,12 @@
 const express = require('express');
 const dotenv =  require('dotenv');
 const router = require('./routes/chatRoutes');
+const connectDB = require('./config/db');
 
 const app = express();
 dotenv.config();
 
+connectDB();
 
 const PORT = process.env.PORT || 5050;
 
